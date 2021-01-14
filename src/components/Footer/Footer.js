@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     width: "100% !important",
     position: "relative",
-    overflowX: "hidden",
+    overflow: "hidden",
     [theme.breakpoints.down("sm")]: {
       alignItems: "center",
     },
@@ -141,10 +141,10 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: "center",
     },
     // position:'absolute',
-    [theme.breakpoints.up("xs")]: {
+    [theme.breakpoints.up("lg")]: {
       marginTop: "-80px",
     },
-    // marginTop: "80px",
+    marginTop: "80px",
     height: "50%",
     width: "20%",
     display: "flex",
