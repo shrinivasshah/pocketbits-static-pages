@@ -4,7 +4,7 @@ import { Container, makeStyles, Typography } from "@material-ui/core";
 function Footer() {
   const classes = useStyles();
   return (
-    <div className={classes.footer}>
+    <div id="contact-us" className={classes.footer}>
       <div className={classes.waveHolder}>
         <Container className={classes.mainContainer}>
           <div className={classes.leftTop}>
@@ -91,7 +91,7 @@ export default Footer;
 const useStyles = makeStyles((theme) => ({
   footer: {
     color: "#fff",
-    height: "80vh",
+    height: "90vh",
   },
   waveHolder: {
     display: "flex",
@@ -141,17 +141,17 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: "center",
     },
     // position:'absolute',
-    // [theme.breakpoints.up("xs")]: {
-    //   marginTop: "-80px",
-    // },
-    marginTop: "80px",
+    [theme.breakpoints.up("xs")]: {
+      marginTop: "-80px",
+    },
+    // marginTop: "80px",
     height: "50%",
     width: "20%",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "flex-end",
-    marginBottom: "100px",
+    marginBottom: "50px",
   },
   typographyAdjustment: {
     marginBottom: "20px",
