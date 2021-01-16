@@ -1,9 +1,16 @@
-import { Typography } from "@material-ui/core";
+import { Box, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/styles";
 import React from "react";
 
 function EndCredits() {
+  const classes = useStyles();
   return (
-    <div style={{ textAlign: "center", paddingBottom: "60px" }}>
+    <Box
+      display="flex"
+      flexDirection="column"
+      flexWrap="wrap"
+      className={classes.root}
+    >
       <Typography variant="h3" style={{ color: "white" }}>
         POCKET<span style={{ color: "#56C3A4" }}>BITS</span>
       </Typography>
@@ -16,8 +23,19 @@ function EndCredits() {
       <Typography variant="p" style={{ color: "#888" }}>
         &copy; 2020 Pocketbits Co. All Rights Reserved
       </Typography>
-    </div>
+    </Box>
   );
 }
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    [theme.breakpoints.down("xs")]: {
+      marginTop: "400px",
+    },
+    marginTop: "-70px",
+    marginBottom: "60px",
+    textAlign: "center",
+  },
+}));
 
 export default EndCredits;

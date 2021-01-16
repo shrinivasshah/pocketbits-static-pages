@@ -44,7 +44,6 @@ function PageHeader() {
 }
 
 const useStyles = makeStyles((theme) => {
-  console.log(theme);
   return {
     container: {
       // [theme.breakpoints.up("lg")]: {
@@ -73,6 +72,10 @@ const useStyles = makeStyles((theme) => {
       [theme.breakpoints.up("md")]: {
         textAlign: "left",
       },
+      [theme.breakpoints.down("md")]: {
+        justifyContent: "flex-start",
+      },
+
       height: "25%",
       textAlign: "center",
     },
@@ -116,56 +119,57 @@ const useStyles = makeStyles((theme) => {
     },
     "@keyframes goDown": {
       "0%": {
-        opacity: 0,
-        transform: "translateY(0.0em)",
-        color: "#fff",
-      },
-      "10%": {
-        opacity: 0.1,
-        transform: "translateY(.1em)",
-        color: theme.palette.primary.main,
-      },
-      "20%": {
-        opacity: 0.2,
-        transform: "translateY(.2em)",
-        // color: "#fff",
-      },
-      "30%": {
-        opacity: 0.3,
-        transform: "translateY(.3em)",
-        // color: theme.palette.primary.main,
-      },
-
-      "40%": {
-        opacity: 0.4,
-        transform: "translateY(.4em)",
-        color: "#fff",
-      },
-      "50%": {
         opacity: 0.5,
-        transform: "translateY(.5em)",
-        // color: theme.palette.primary.main,
-      },
-      "60%": {
-        opacity: 0.6,
-        transform: "translateY(.4em)",
+        transform: "translateY(0.0em)",
         // color: "#fff",
-      },
-      "70%": {
-        opacity: 0.7,
-        transform: "translateY(.3em)",
         color: theme.palette.primary.main,
       },
-      "80%": {
-        opacity: 0.8,
-        transform: "translateY(.2em)",
-        // color: "#fff",
-      },
-      "90%": {
-        opacity: 0.9,
-        transform: "translateY(.1em)",
-        // color: theme.palette.primary.main,
-      },
+      // "10%": {
+      //   opacity: 0.1,
+      //   transform: "translateY(.1em)",
+      //   color: theme.palette.primary.main,
+      // },
+      // "20%": {
+      //   opacity: 0.2,
+      //   transform: "translateY(.2em)",
+      //   // color: "#fff",
+      // },
+      // "30%": {
+      //   opacity: 0.3,
+      //   transform: "translateY(.3em)",
+      //   // color: theme.palette.primary.main,
+      // },
+
+      // "40%": {
+      //   opacity: 0.4,
+      //   transform: "translateY(.4em)",
+      //   color: "#fff",
+      // },
+      // "50%": {
+      //   opacity: 0.5,
+      //   transform: "translateY(.5em)",
+      //   // color: theme.palette.primary.main,
+      // },
+      // "60%": {
+      //   opacity: 0.6,
+      //   transform: "translateY(.4em)",
+      //   // color: "#fff",
+      // },
+      // "70%": {
+      //   opacity: 0.7,
+      //   transform: "translateY(.3em)",
+      //   color: theme.palette.primary.main,
+      // },
+      // "80%": {
+      //   opacity: 0.8,
+      //   transform: "translateY(.2em)",
+      //   // color: "#fff",
+      // },
+      // "90%": {
+      //   opacity: 0.9,
+      //   transform: "translateY(.1em)",
+      //   // color: theme.palette.primary.main,
+      // },
       "100%": {
         opacity: 1,
         transform: "translateY(0.0em)",

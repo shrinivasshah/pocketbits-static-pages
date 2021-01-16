@@ -5,7 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Tab from "@material-ui/core/Tab";
 import { Container, Tabs } from "@material-ui/core";
-import { withStyles } from "@material-ui/styles";
+// import { withStyles } from "@material-ui/styles";
 import NavColorTriggerOnScroll from "./NavColorTriggerOnScroll";
 
 function Navbar(props) {
@@ -16,40 +16,40 @@ function Navbar(props) {
     setPage(newPage);
   };
 
-  const StyledTabs = withStyles((theme) => ({
-    indicator: {
-      display: "flex",
-      justifyContent: "center",
-      backgroundColor: "transparent",
-      "& > div": {
-        maxWidth: 50,
-        width: "100%",
-        backgroundColor: "#635ee7",
-      },
-      animation: "2s",
-    },
-  }))((props) => <Tabs {...props} TabIndicatorProps={{ children: <div /> }} />);
+  // const StyledTabs = withStyles((theme) => ({
+  //   indicator: {
+  //     display: "flex",
+  //     justifyContent: "center",
+  //     backgroundColor: "transparent",
+  //     "& > div": {
+  //       maxWidth: 50,
+  //       width: "100%",
+  //       backgroundColor: "#635ee7",
+  //     },
+  //     animation: "2s",
+  //   },
+  // }))((props) => <Tabs {...props} TabIndicatorProps={{ children: <div /> }} />);
 
-  const StyledTab = withStyles((theme) => ({
-    root: {
-      textTransform: "initial",
-      color: "#9e88a2",
-      fontWeight: theme.typography.fontWeightLight,
-      fontSize: theme.typography.pxToRem(15),
-      marginRight: theme.spacing.unit * 1,
-      transition: "0.9s ease-out",
-      "&:hover": {
-        color: "#fff",
-      },
-      "&$selected": {
-        color: "#fff",
-      },
-      "&:focus": {
-        color: "#fff",
-      },
-    },
-    selected: {},
-  }))((props) => <Tab disableRipple {...props} />);
+  // const StyledTab = withStyles((theme) => ({
+  //   root: {
+  //     textTransform: "initial",
+  //     color: "#9e88a2",
+  //     fontWeight: theme.typography.fontWeightLight,
+  //     fontSize: theme.typography.pxToRem(15),
+  //     marginRight: theme.spacing.unit * 1,
+  //     transition: "0.9s ease-out",
+  //     "&:hover": {
+  //       color: "#fff",
+  //     },
+  //     "&$selected": {
+  //       color: "#fff",
+  //     },
+  //     "&:focus": {
+  //       color: "#fff",
+  //     },
+  //   },
+  //   selected: {},
+  // }))((props) => <Tab disableRipple {...props} />);
 
   //styled Tab
 
@@ -74,17 +74,22 @@ function Navbar(props) {
                 <span style={{ color: "white" }}>POCKET</span>
                 <span className={classes.mainThemeColor}>BITS</span>
               </Typography>
-              <StyledTabs
+              <Tabs
                 value={page}
                 onChange={handleChange}
+                className={classes.tabs}
                 indicatorColor="primary"
-                centered
+                TabIndicatorProps={{
+                  style: {
+                    backgroundColor: "#635ee7",
+                  },
+                }}
               >
-                <StyledTab label="Trade" />
-                <StyledTab label="Fees" />
-                <StyledTab label="About Us" />
-                <StyledTab label="Contact Us" />
-              </StyledTabs>
+                <Tab label="Trade" className={classes.tab} />
+                <Tab label="Fees" className={classes.tab} />
+                <Tab label="About Us" className={classes.tab} />
+                <Tab label="Contact Us" className={classes.tab} />
+              </Tabs>
             </Toolbar>
           </Container>
         </AppBar>
@@ -106,5 +111,14 @@ const useStyles = makeStyles((theme) => ({
 
   title: {
     flexGrow: 1,
+  },
+  tabs: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
+  tab: {
+    minWidth: "10",
+    color: theme.palette.secondary.main,
   },
 }));

@@ -1,8 +1,7 @@
-import { Container } from "@material-ui/core";
 import React from "react";
 import CardComponentHolder from "../components/CardComponentHolder/CardComponentHolder";
 import EndCredits from "../components/EndCredits/EndCredits";
-import Footer from "../components/Footer/Footer";
+import FooterWithContent from "../components/Footer/FooterWithContent";
 import InputForm from "../components/InputForm/InputForm";
 import Navbar from "../components/Navbar/Navbar";
 import PageHeader from "../components/PageHeader/PageHeader";
@@ -14,7 +13,8 @@ function ContactUs() {
       <PageHeader />
       <CardComponentHolder />
       <InputForm />
-      <Footer />
+      {/* <Footer /> */}
+      <FooterWithContent />
       <EndCredits />
     </div>
   );

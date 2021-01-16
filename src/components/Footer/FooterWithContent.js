@@ -1,15 +1,32 @@
-import React from "react";
+import { Box, Container, makeStyles, Typography } from "@material-ui/core";
 import Waves from "../../assets/Waves.svg";
-import { Container, makeStyles, Typography } from "@material-ui/core";
+import React from "react";
 
-function Footer() {
+function FooterWithContent() {
   const classes = useStyles();
 
   return (
-    <div id="contact-us" className={classes.footer}>
-      <div className={classes.waveHolder}>
-        <Container className={classes.mainContainer}>
-          <div className={classes.leftTop}>
+    <Box
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+      style={{ minHeight: "100vh", position: "relative", overflowX: "hidden" }}
+    >
+      <img src={Waves} alt="waves-bg" className={classes.rootImg} />
+      <Container maxWidth="lg">
+        <Box
+          display="flex"
+          flexDirection="column"
+          justifyContent="space-evenly"
+          className={classes.root}
+        >
+          <Box
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-around"
+            className={classes.topBox}
+          >
             <Typography variant="h5" className={classes.typographyAdjustment}>
               Explore the future of money
             </Typography>
@@ -19,9 +36,15 @@ function Footer() {
                 Signed up
               </span>
             </Typography>
-          </div>
-          <div className={classes.secondFlex}>
-            <div className={classes.commonColumn}>
+          </Box>
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            flexWrap="wrap"
+            className={classes.bottomBox}
+          >
+            <div className={classes.column}>
               <Typography variant="h5">
                 <strong>Company</strong>
               </Typography>
@@ -44,7 +67,7 @@ function Footer() {
                 AML & KYC
               </Typography>
             </div>
-            <div className={classes.secondColumn}>
+            <div className={classes.column}>
               <Typography variant="h6" className={classes.listItems}>
                 We are Hiring
               </Typography>
@@ -55,7 +78,7 @@ function Footer() {
                 Low Latency API
               </Typography>
             </div>
-            <div>
+            <div className={classes.column}>
               <Typography variant="h5">
                 <strong>Support</strong>
               </Typography>
@@ -69,7 +92,7 @@ function Footer() {
                 FAQ's
               </Typography>
             </div>
-            <div className={classes.secondColumn}>
+            <div className={classes.column}>
               <Typography variant="h6" className={classes.listItems}>
                 Partnership Queries
               </Typography>
@@ -80,106 +103,60 @@ function Footer() {
                 Media Assets
               </Typography>
             </div>
-          </div>
-        </Container>
-        <img src={Waves} alt="waves" className={classes.waves} />
-      </div>
-    </div>
+          </Box>
+        </Box>
+      </Container>
+    </Box>
   );
 }
+export default FooterWithContent;
 
-export default Footer;
+const useStyles = makeStyles((theme) => {
+  return {
+    rootImg: {
+      //   [theme.breakpoints.up("lg")]: {
+      //     transform: "translateY(-10%)",
+      //   },
 
-const useStyles = makeStyles((theme) => ({
-  footer: {
-    color: "#fff",
-    height: "90vh",
-  },
-  waveHolder: {
-    display: "flex",
-    flexDirection: "column",
-    height: "100%",
-    width: "100% !important",
-    position: "relative",
-    overflow: "hidden",
-    [theme.breakpoints.down("sm")]: {
-      alignItems: "center",
+      //   [theme.breakpoints.up("sm")]: {
+      //     transform: "translateY(-20%)",
+      //   },
+      [theme.breakpoints.down("sm")]: {
+        transform: "translateY(-28%)",
+      },
+      [theme.breakpoints.up("md")]: {
+        transform: "translateY(-20%)",
+      },
+      [theme.breakpoints.up("lg")]: {
+        transform: "translateY(0%)",
+      },
+      [theme.breakpoints.width]: {},
+      height: "100%",
+      width: "130%",
+      position: "absolute",
+      zIndex: "-99",
+      left: "-18%",
+      top: "0",
     },
-  },
-  mainContainer: {
-    [theme.breakpoints.down("md")]: {
-      alignItems: "center",
+    root: {
+      color: "#fff",
+      minHeight: "70vh",
+      width: "100%",
     },
-    [theme.breakpoints.up("sm")]: {
-      marginTop: "-70px",
+    topBox: {
+      height: "15vh",
+      minWidth: "20%",
     },
-    marginTop: "80px",
-    height: "100%",
-    // [theme.breakpoints.down("md")]: {
-    //   width: "80%",
-    // },
-    maxWidth: "none",
-    width: "85% !important",
-  },
-  waves: {
-    zIndex: -99,
-    position: "absolute",
-    height: "auto",
-    display: "block",
-    width: "130%",
-    [theme.breakpoints.up("lg")]: {
-      left: "-350px",
+    bottomBox: {
+      height: "50vh",
+      alignSelf: "strech",
     },
-
-    [theme.breakpoints.down("sm")]: {
-      left: "-100px",
+    listItems: {
+      fontWeight: 100,
+      lineHeight: "50px",
     },
-    left: "-160px",
-    // transform: "translateX(-300px)",
-  },
-  leftTop: {
-    [theme.breakpoints.down("sm")]: {
-      //   textAlign: "center",
-      justifyContent: "center",
+    column: {
+      padding: "0 10px",
     },
-    // position:'absolute',
-    [theme.breakpoints.up("lg")]: {
-      marginTop: "-80px",
-    },
-    marginTop: "80px",
-    height: "50%",
-    width: "20%",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "flex-end",
-    marginBottom: "50px",
-  },
-  typographyAdjustment: {
-    marginBottom: "20px",
-  },
-  secondFlex: {
-    display: "flex",
-    flexWrap: "wrap",
-    width: "100%",
-    height: "auto",
-    justifyContent: "space-between",
-  },
-  commonColumn: {
-    // display: "flex",
-    // flexDirection: "column",
-    // height: "300px",
-    // justifyContent: "space-evenly",
-  },
-  listItems: {
-    fontWeight: 100,
-    lineHeight: "50px",
-  },
-  secondColumn: {
-    marginTop: "25px",
-    // display: "flex",
-    // flexDirection: "column",
-    // justifyContent: "space-evenly",
-    // height: "140px",
-  },
-}));
+  };
+});
