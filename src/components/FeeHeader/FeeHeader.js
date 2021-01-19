@@ -1,39 +1,32 @@
 import React from "react";
-import { Box, Container, makeStyles, Typography } from "@material-ui/core";
+
+import { Box, Grid, makeStyles, Typography } from "@material-ui/core";
 import TransperantCard from "../TransperantCard/TransperantCard";
-import CheckboxHolder from "../CheckboxHolder/CheckboxHolder";
 import FeeDetails from "../FeeDetails/FeeDetails";
 
 function FeeHeader() {
   const classes = useStyles();
   return (
-    <Container maxWidth="xl">
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="strech"
-        justifyContent="space-evenly"
-        className={classes.root}
-      >
-        <Box textAlign="center" className={classes.upperBox}>
-          <Typography variant="h2">
-            <strong>
-              Break Free From Fees with
-              <br /> PocketBits!
-            </strong>
-          </Typography>
-        </Box>
-        <Box display="flex" alignItems="strech">
-          <Box
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            className={classes.cardBox}
-          >
-            <TransperantCard />
-          </Box>
+    <Box
+      display="flex"
+      flexDirection="column"
+      alignItems="strech"
+      justifyContent="space-around"
+      className={classes.root}
+    >
+      <Typography variant="h3" className={classes.header}>
+        <strong>Break Free From Fees with PocketBits!</strong>
+      </Typography>
 
+      <Grid container>
+        <Grid item xl={6} md={6} sm={12} justify="center">
+          <Box display="flex" alignItems="center" justifyContent="center">
+            <TransperantCard list />
+          </Box>
+        </Grid>
+        <Grid item xl={6} md={6} sm={12}>
           <Box
+            textAlign="center"
             display="flex"
             flexDirection="column"
             justifyContent="space-around"
@@ -41,14 +34,15 @@ function FeeHeader() {
           >
             <FeeDetails />
           </Box>
-        </Box>
-      </Box>
-    </Container>
+        </Grid>
+      </Grid>
+    </Box>
   );
 }
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    [theme.breakpoints.down("md")]: {},
     minHeight: "100vh",
     color: "#fff",
   },
@@ -58,8 +52,24 @@ const useStyles = makeStyles((theme) => ({
   lowerBox: {
     height: "70vh",
   },
-  cardBox: {
-    width: "50%",
+  detailsBox: {
+    height: "100%",
+
+    width: "70%",
+    margin: "0 auto",
+    // [theme.breakpoints.down("sm")]: {
+    //   paddingLeft: "12%",
+    //   width: "90%",
+    // },
+  },
+  header: {
+    textAlign: "center",
+    [theme.breakpoints.down("md")]: {
+      marginTop: "10%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "20%",
+    },
   },
 }));
 export default FeeHeader;

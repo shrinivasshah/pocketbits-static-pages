@@ -1,6 +1,6 @@
 import { Container, Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import { BsChevronCompactDown } from "react-icons/bs";
 import headerImg from "../../assets/headerImg.png";
 function PageHeader() {
@@ -34,9 +34,9 @@ function PageHeader() {
         </div>
         <div className={classes.downArrow}>
           <Typography variant="p">Get in Touch</Typography>
-          <Link to="contact-us" smooth spy>
+          <ScrollLink to="contact-us" smooth spy>
             <BsChevronCompactDown className={classes.goDown} />
-          </Link>
+          </ScrollLink>
         </div>
       </header>
     </Container>

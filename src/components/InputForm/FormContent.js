@@ -91,6 +91,7 @@ const useStyles = makeStyles((theme) => ({
     },
     width: "97%",
     color: "#fff",
+    fontFamily: "inherit",
     margin: "0 auto",
     background: "#1d1d1d",
     border: "none",

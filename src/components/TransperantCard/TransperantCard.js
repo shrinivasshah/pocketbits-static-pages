@@ -1,17 +1,76 @@
-import { makeStyles, Typography } from "@material-ui/core";
+import { Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
-
-function TransperantCard({ icon, text, info }) {
+import data from "../cardListData";
+function TransperantCard({ icon, text, info, list }) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <img src={icon} alt="" className={classes.image} />
-      <Typography variant="h4">{text}</Typography>
-      {info ? (
-        <Typography variant="p" style={{ fontWeight: 100 }}>
-          {info}
-        </Typography>
-      ) : null}
+      {!list ? (
+        <>
+          <img src={icon} alt="" className={classes.image} />
+          <Typography variant="h4">{text}</Typography>
+          {info ? (
+            <Typography variant="p" style={{ fontWeight: 100 }}>
+              {info}
+            </Typography>
+          ) : null}
+        </>
+      ) : (
+        <Box
+          display="flex"
+          className={classes.listBox}
+          flexDirection="column"
+          flexWrap="wrap"
+          justifyContent="space-evenly"
+          alignItems="center"
+        >
+          {data.map((item, index) => (
+            <>
+              <Box
+                key={index}
+                display="flex"
+                justifyContent="space-evenly"
+                alignItems="center"
+                textAlign="center"
+                className={classes.innerBox}
+              >
+                {item.title ? (
+                  <>
+                    <Typography
+                      display="block"
+                      className={classes.typographyWidth}
+                      variant="overline"
+                    >
+                      {item.item1}
+                    </Typography>
+                    <Typography
+                      className={classes.typographyWidth}
+                      variant="overline"
+                    >
+                      {item.item2}
+                    </Typography>
+                  </>
+                ) : (
+                  <>
+                    <Typography
+                      className={classes.typographyWidth}
+                      variant="subtitle1"
+                    >
+                      <strong>{item.item1}</strong>
+                    </Typography>
+                    <Typography
+                      className={classes.typographyWidth}
+                      variant="subtitle1"
+                    >
+                      <strong>{item.item2}</strong>
+                    </Typography>
+                  </>
+                )}
+              </Box>
+            </>
+          ))}
+        </Box>
+      )}
     </div>
   );
 }
@@ -19,6 +78,11 @@ function TransperantCard({ icon, text, info }) {
 const useStyles = makeStyles((theme) => ({
   root: {
     textAlign: "center",
+    [theme.breakpoints.down("md")]: {
+      width: "80%",
+      height: "100%",
+    },
+
     width: "338px",
     height: "457px",
     display: "flex",
@@ -51,11 +115,24 @@ const useStyles = makeStyles((theme) => ({
     // borderRadius: "24px"
     transition: "all .4s ease-in-out",
     "&:hover": {
+      [theme.breakpoints.down("sm")]: {
+        transform: "scale(1.05,1.05)",
+      },
       transform: "scale(1.15,1.15)",
     },
   },
   image: {
     marginBottom: "10px",
+  },
+  listBox: {
+    height: "100%",
+    width: "100%",
+  },
+  innerBox: {
+    width: "100%",
+  },
+  typographyWidth: {
+    width: "50%",
   },
 }));
 export default TransperantCard;

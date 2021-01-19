@@ -9,7 +9,6 @@ import PageHeader from "../components/PageHeader/PageHeader";
 function ContactUs() {
   return (
     <div>
-      <Navbar />
       <PageHeader />
       <CardComponentHolder />
       <InputForm />

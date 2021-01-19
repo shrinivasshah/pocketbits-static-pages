@@ -5,6 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Tab from "@material-ui/core/Tab";
 import { Container, Tabs } from "@material-ui/core";
+import { Link } from "react-router-dom";
 // import { withStyles } from "@material-ui/styles";
 import NavColorTriggerOnScroll from "./NavColorTriggerOnScroll";
 
@@ -85,8 +86,18 @@ function Navbar(props) {
                   },
                 }}
               >
-                <Tab label="Trade" className={classes.tab} />
-                <Tab label="Fees" className={classes.tab} />
+                <Tab
+                  label="Trade"
+                  to="/"
+                  component={Link}
+                  className={classes.tab}
+                />
+                <Tab
+                  label="Fees"
+                  to="/fees"
+                  component={Link}
+                  className={classes.tab}
+                />
                 <Tab label="About Us" className={classes.tab} />
                 <Tab label="Contact Us" className={classes.tab} />
               </Tabs>

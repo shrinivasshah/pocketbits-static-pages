@@ -7,6 +7,7 @@ function FooterWithContent() {
 
   return (
     <Box
+      id="contact-us"
       display="flex"
       flexDirection="column"
       justifyContent="center"
