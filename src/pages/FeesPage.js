@@ -7,7 +7,7 @@ function FeesPage() {
   return (
     <div>
       <FeeHeader />
-      {/* <FeaturesComponent /> */}
+      <FeaturesComponent />
     </div>
   );
 }
