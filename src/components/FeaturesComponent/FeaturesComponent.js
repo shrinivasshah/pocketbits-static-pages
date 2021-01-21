@@ -6,6 +6,7 @@ import cryptoWithrawl from "../../assets/cryptoWithdrawl.svg";
 import cryptoDeposit from "../../assets/cryptoDeposit.svg";
 import inrWithdrawl from "../../assets/inrWithdrawlFee.svg";
 import zeroPercent from "../../assets/zeroPercent.svg";
+
 function FeaturesComponent() {
   const classes = styles();
   return (
@@ -69,8 +70,6 @@ const styles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       marginTop: "10%",
     },
-    minHeight: "100vh",
-
     width: "100%",
     position: "relative",
     // "&:before": {
@@ -111,7 +110,7 @@ const styles = makeStyles((theme) => ({
     left: "30%",
     [theme.breakpoints.down("md")]: {
       position: "static",
-      margin: "0 4rem",
+      margin: "0 auto",
     },
   },
   topRight: {
@@ -122,7 +121,7 @@ const styles = makeStyles((theme) => ({
     right: "30%",
     [theme.breakpoints.down("md")]: {
       position: "static",
-      margin: "0 4rem",
+      margin: "0 auto",
     },
   },
   middleLeft: {
@@ -133,7 +132,7 @@ const styles = makeStyles((theme) => ({
     left: "25%",
     [theme.breakpoints.down("md")]: {
       position: "static",
-      margin: "0 4rem",
+      margin: "0 auto",
     },
   },
   middleRight: {
@@ -144,7 +143,7 @@ const styles = makeStyles((theme) => ({
     right: "25%",
     [theme.breakpoints.down("md")]: {
       position: "static",
-      margin: "0 4rem",
+      margin: "0 auto",
     },
   },
   bottom: {
@@ -153,10 +152,10 @@ const styles = makeStyles((theme) => ({
     width: "17rem",
     left: "50%",
     bottom: "0%",
-    transform: "translateX(-45%)",
+    transform: "translateX(-50%)",
     [theme.breakpoints.down("md")]: {
       position: "static",
-      margin: "0 4rem",
+      margin: "0 auto",
       transform: "translateX(0%)",
     },
   },
