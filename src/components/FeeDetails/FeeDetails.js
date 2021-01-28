@@ -4,13 +4,15 @@ import CheckboxHolder from "../CheckboxHolder/CheckboxHolder";
 import SliderComponent from "../SliderComponent/SliderComponent";
 import { makeStyles } from "@material-ui/styles";
 
-function FeeDetails() {
+function FeeDetails({ hideZeroFee }) {
   const classes = useStyles();
   return (
     <>
-      <Typography variant="h3">
-        <strong>0% Fee on</strong>
-      </Typography>
+      {!hideZeroFee ? (
+        <Typography variant="h3">
+          <strong>0% Fee on</strong>
+        </Typography>
+      ) : null}
       <CheckboxHolder />
 
       <Typography variant="h4">Trading Fee Comparison</Typography>

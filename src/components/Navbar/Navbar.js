@@ -99,7 +99,12 @@ function Navbar(props) {
                   className={classes.tab}
                 />
                 <Tab label="About Us" className={classes.tab} />
-                <Tab label="Contact Us" className={classes.tab} />
+                <Tab
+                  label="Contact Us"
+                  to="/contact-us"
+                  component={Link}
+                  className={classes.tab}
+                />
               </Tabs>
             </Toolbar>
           </Container>

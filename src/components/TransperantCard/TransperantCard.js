@@ -110,9 +110,7 @@ const useStyles = makeStyles((theme) => ({
 
     borderRadius: "24px",
     backdropFilter: "blur(10px)",
-    // /* Note: backdrop-filter has minimal browser support */
 
-    // borderRadius: "24px"
     transition: "all .4s ease-in-out",
     "&:hover": {
       [theme.breakpoints.down("sm")]: {
