@@ -1,11 +1,24 @@
-import { Box, Container, makeStyles, Typography } from "@material-ui/core";
+import {
+  Box,
+  Container,
+  makeStyles,
+  Typography,
+  useMediaQuery,
+} from "@material-ui/core";
+import { useTheme } from "@material-ui/styles";
 import React from "react";
-import EmptyTransparentCard from "../EmptyTransparentCard/EmptyTransparentCard";
+import reverseWave from "../../assets/wavesReversed.svg";
+import LandingPageCardsHolder from "../LandingPageCardsHolder/LandingPageCardsHolder";
 import LandingPageFeaturesHolder from "../LandingPageFeaturesHolder/LandingPageFeaturesHolder";
 
 function LandingPageFourthSection() {
+  const theme = useTheme();
+  const small = useMediaQuery(theme.breakpoints.down("sm"));
+  const classes = useStyles();
   return (
     <Box
+      className={classes.root}
+      position="relative"
       color="#fff"
       minHeight="120vh"
       flexDirection="column"
@@ -13,6 +26,7 @@ function LandingPageFourthSection() {
       alignItems="center"
       justifyContent="space-evenly"
     >
+      <img className={classes.wavesReversed} src={reverseWave} alt="" />
       <LandingPageFeaturesHolder />
       <Box
         display="flex"
@@ -27,53 +41,26 @@ function LandingPageFourthSection() {
           </strong>
         </Typography>
       </Box>
-      <Box
-        width="100%"
-        display="flex"
-        justifyContent="space-evenly"
-        alignItems="center"
-      >
-        <EmptyTransparentCard>
-          <Container>
-            <Box
-              width="100%"
-              height="200px"
-              display="flex"
-              flexDirection="column"
-              alignItems="start"
-              justifyContent="space-evenly"
-            >
-              <Typography variant="h6">
-                <strong>Security</strong>
-              </Typography>
-              <Typography variant="body1">Hack-free operations</Typography>
-            </Box>
-          </Container>
-        </EmptyTransparentCard>
-        <EmptyTransparentCard>
-          <Container>
-            <Box
-              width="100%"
-              height="200px"
-              display="flex"
-              flexDirection="column"
-              alignItems="start"
-              justifyContent="space-evenly"
-            >
-              <Box>
-                <Typography variant="h6">
-                  <strong>Accountability</strong>
-                </Typography>
-                <Typography variant="body1">Accounts audited by</Typography>
-                <Typography>Independant professsionls.</Typography>
-              </Box>
-            </Box>
-          </Container>
-        </EmptyTransparentCard>
-      </Box>
+      {small ? (
+        <Container>
+          <LandingPageCardsHolder />
+        </Container>
+      ) : (
+        <LandingPageCardsHolder />
+      )}
     </Box>
   );
 }
 
-const useStyles = makeStyles((theme) => ({}));
+const useStyles = makeStyles((theme) => ({
+  root: {
+    overflowX: "hidden",
+  },
+  wavesReversed: {
+    position: "absolute",
+    width: "130vw",
+    left: "-20vw",
+    bottom: "-40vh",
+  },
+}));
 export default LandingPageFourthSection;

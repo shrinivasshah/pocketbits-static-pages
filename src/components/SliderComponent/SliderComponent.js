@@ -37,7 +37,8 @@ function SliderComponent() {
       <PrettoSlider
         valueLabelDisplay="auto"
         aria-label="pretto slider"
-        defaultValue={20}
+        defaultValue={0}
+        max={10000}
       />
     </div>
   );

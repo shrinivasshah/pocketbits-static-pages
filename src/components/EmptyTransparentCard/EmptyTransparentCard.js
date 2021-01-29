@@ -16,7 +16,9 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "40px 60px 200px rgba(16, 18, 26, 0.5)",
     borderRadius: "24px",
     backdropFilter: "blur(10px)",
-
+    [theme.breakpoints.down("md")]: {
+      margin: "20px",
+    },
     transition: "all .4s ease-in-out",
     "&:hover": {
       [theme.breakpoints.down("sm")]: {

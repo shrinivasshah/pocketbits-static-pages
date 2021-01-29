@@ -9,6 +9,7 @@ function LandingPageFeature({ image, text }) {
       alignItems="center"
       flexDirection="column"
       height="100%"
+      textAlign="center"
       justifyContent="space-between"
     >
       <img className={classes.featureImage} src={image} alt="features" />

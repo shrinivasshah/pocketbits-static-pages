@@ -133,7 +133,7 @@ const useStyles = makeStyles((theme) => {
       },
       [theme.breakpoints.width]: {},
       height: "100%",
-      width: "130%",
+      width: "130vw",
       position: "absolute",
       zIndex: "-99",
       left: "-18%",
