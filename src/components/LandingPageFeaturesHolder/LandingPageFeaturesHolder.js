@@ -32,4 +32,3 @@ function LandingPageFeaturesHolder() {
 }
 
 export default LandingPageFeaturesHolder;
-//

@@ -1,7 +1,9 @@
 import { Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
+import { useSelector } from "react-redux";
 import data from "../cardListData";
 function TransperantCard({ icon, text, info, list }) {
+  const state = useSelector((state) => state);
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -24,7 +26,7 @@ function TransperantCard({ icon, text, info, list }) {
           justifyContent="space-evenly"
           alignItems="center"
         >
-          {data.map((item, index) => (
+          {state?.map((item, index) => (
             <>
               <Box
                 key={index}
@@ -34,38 +36,18 @@ function TransperantCard({ icon, text, info, list }) {
                 textAlign="center"
                 className={classes.innerBox}
               >
-                {item.title ? (
-                  <>
-                    <Typography
-                      display="block"
-                      className={classes.typographyWidth}
-                      variant="overline"
-                    >
-                      {item.item1}
-                    </Typography>
-                    <Typography
-                      className={classes.typographyWidth}
-                      variant="overline"
-                    >
-                      {item.item2}
-                    </Typography>
-                  </>
-                ) : (
-                  <>
-                    <Typography
-                      className={classes.typographyWidth}
-                      variant="subtitle1"
-                    >
-                      <strong>{item.item1}</strong>
-                    </Typography>
-                    <Typography
-                      className={classes.typographyWidth}
-                      variant="subtitle1"
-                    >
-                      <strong>{item.item2}</strong>
-                    </Typography>
-                  </>
-                )}
+                <Typography
+                  className={classes.typographyWidth}
+                  variant="subtitle1"
+                >
+                  <strong>{item.name}</strong>
+                </Typography>
+                <Typography
+                  className={classes.typographyWidth}
+                  variant="subtitle1"
+                >
+                  <strong>₹{item.value}</strong>
+                </Typography>
               </Box>
             </>
           ))}

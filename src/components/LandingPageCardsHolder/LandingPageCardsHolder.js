@@ -1,17 +1,21 @@
 import { Box, Container, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import EmptyTransparentCard from "../EmptyTransparentCard/EmptyTransparentCard";
+import reverseWave from "../../assets/wavesReversed.svg";
 
 function LandingPageCardsHolder() {
   const classes = useStyles();
   return (
     <Box
+      className={classes.root}
+      position="relative"
       width="100%"
       display="flex"
       justifyContent="space-evenly"
       alignItems="center"
       flexWrap="wrap"
     >
+      <img className={classes.wavesReversed} src={reverseWave} alt="" />
       <EmptyTransparentCard>
         <Container maxWidth="sm">
           <Box
@@ -89,6 +93,15 @@ function LandingPageCardsHolder() {
 }
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    overflowX: "hidden",
+  },
+  wavesReversed: {
+    position: "absolute",
+    width: "130vw",
+    left: "-20vw",
+    bottom: "-50vh",
+  },
   accountability: {},
   audited: {
     paddingBottom: "20px",
@@ -97,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "25px",
   },
   reliabilitySubText: {
-    lineHeight: "10px",
+    lineHeight: "25px",
     marginBottom: "15px",
   },
 }));

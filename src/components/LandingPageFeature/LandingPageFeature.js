@@ -1,7 +1,7 @@
-import { Box, makeStyles, Typography } from "@material-ui/core";
+import { Box, Container, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 
-function LandingPageFeature({ image, text }) {
+function LandingPageFeature({ title, image, text }) {
   const classes = useStyles();
   return (
     <Box
@@ -12,16 +12,22 @@ function LandingPageFeature({ image, text }) {
       textAlign="center"
       justifyContent="space-between"
     >
-      <img className={classes.featureImage} src={image} alt="features" />
-      <Typography variant="body1">
-        <strong>{text}</strong>
-      </Typography>
+      <Container maxWidth="xs">
+        <img className={classes.featureImage} src={image} alt="features" />
+        <Typography variant="h6">
+          <strong>{title}</strong>
+        </Typography>
+        <Typography variant="body1">
+          <strong>{text}</strong>
+        </Typography>
+      </Container>
     </Box>
   );
 }
 
 const useStyles = makeStyles((theme) => ({
   featureImage: {
+    marginBottom: "20px",
     height: "auto",
     width: "200px",
   },

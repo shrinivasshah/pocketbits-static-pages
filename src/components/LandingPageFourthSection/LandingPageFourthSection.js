@@ -7,7 +7,6 @@ import {
 } from "@material-ui/core";
 import { useTheme } from "@material-ui/styles";
 import React from "react";
-import reverseWave from "../../assets/wavesReversed.svg";
 import LandingPageCardsHolder from "../LandingPageCardsHolder/LandingPageCardsHolder";
 import LandingPageFeaturesHolder from "../LandingPageFeaturesHolder/LandingPageFeaturesHolder";
 
@@ -18,15 +17,15 @@ function LandingPageFourthSection() {
   return (
     <Box
       className={classes.root}
+      paddingBottom="15vh"
       position="relative"
       color="#fff"
-      minHeight="120vh"
+      minHeight="150vh"
       flexDirection="column"
       display="flex"
       alignItems="center"
       justifyContent="space-evenly"
     >
-      <img className={classes.wavesReversed} src={reverseWave} alt="" />
       <LandingPageFeaturesHolder />
       <Box
         display="flex"
@@ -53,14 +52,8 @@ function LandingPageFourthSection() {
 }
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    overflowX: "hidden",
-  },
-  wavesReversed: {
-    position: "absolute",
-    width: "130vw",
-    left: "-20vw",
-    bottom: "-40vh",
-  },
+  // root: {
+  //   overflow: "hidden",
+  // },
 }));
 export default LandingPageFourthSection;

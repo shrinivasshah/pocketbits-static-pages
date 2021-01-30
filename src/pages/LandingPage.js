@@ -1,6 +1,7 @@
 import { Box } from "@material-ui/core";
 
 import React from "react";
+import LandingPageFifthRow from "../components/LandingPageFifthSection/LandingPageFifthRow";
 import LandingPageFourthSection from "../components/LandingPageFourthSection/LandingPageFourthSection";
 
 import LandingPageHeader from "../components/LandingPageHeader/LandingPageHeader";
@@ -12,6 +13,7 @@ function LandingPage() {
       <LandingPageHeader />
       <ThirdDivision />
       <LandingPageFourthSection />
+      <LandingPageFifthRow />
     </Box>
   );
 }

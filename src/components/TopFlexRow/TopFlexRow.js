@@ -18,7 +18,7 @@ function TopFlexRow() {
     <Box className={classes.transparentRow}>
       <Box className={classes.scrollableFlex}>
         {coinList.map((item, index) => {
-          return <TopFlexRowCard index={index} coin={item} />;
+          return <TopFlexRowCard key={index} index={index} coin={item} />;
         })}
       </Box>
     </Box>

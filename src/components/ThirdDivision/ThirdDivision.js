@@ -19,6 +19,7 @@ function ThirdDivision() {
       width="100vw"
       position="relative"
       overflow="hidden"
+      paddingBottom="10vh"
     >
       <img
         className={classes.reverseWave}

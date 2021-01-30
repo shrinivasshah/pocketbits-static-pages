@@ -1,11 +1,12 @@
-import { Box, Button, makeStyles, Typography } from "@material-ui/core";
+import { Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 function TopFlexRowCard({ index, coin }) {
   const classes = useStyles();
   return (
     <>
-      <Box key={index} className={classes.cardsInsideFlexRow}>
+      <Box className={classes.cardsInsideFlexRow}>
         <Box
+          key={index}
           height="100%"
           width="100%"
           display="flex"
