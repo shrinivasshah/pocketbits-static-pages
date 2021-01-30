@@ -4,39 +4,47 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 
 function SliderComponent() {
-  const [stepSize, changeStepSize] = useState(1000);
+  const [stepSize, setStepSize] = useState(1000);
   const dispatch = useDispatch();
   const handleChange = (e, value) => {
     let unoCoin = 0.7;
     let zebPay = 0.4;
     let wazirX = 0.2;
     let coinDcx = 0.1;
-
+    if (value === 10000) {
+      setStepSize(5000);
+    } else if (value === 100000) {
+      setStepSize(10000);
+    } else if (value === 1000000) {
+      setStepSize(150000);
+    }
+    dispatch({
+      type: "VALUE",
+      payload: value,
+    });
     dispatch({
       type: "UNOCOIN",
-      payload: parseInt(value) + (parseInt(value) * unoCoin) / 100,
+      payload: ((parseInt(value) * unoCoin) / 100).toFixed(2),
     });
     dispatch({
       type: "ZEBPAY",
-      payload: parseInt(value) + (parseInt(value) * zebPay) / 100,
+      payload: ((parseInt(value) * zebPay) / 100).toFixed(2),
     });
     dispatch({
       type: "WAZIRX",
-      payload: parseInt(value) + (parseInt(value) * wazirX) / 100,
+      payload: ((parseInt(value) * wazirX) / 100).toFixed(2),
     });
     dispatch({
       type: "COINDCX",
-      payload: parseInt(value) + (parseInt(value) * coinDcx) / 100,
+      payload: ((parseInt(value) * coinDcx) / 100).toFixed(2),
     });
-    dispatch({ type: "POCKETBITS", payload: parseInt(value) });
   };
   return (
     <div>
       <PrettoSlider
-        valueLabelDisplay="auto"
         aria-label="pretto slider"
         defaultValue={0}
-        max={100000}
+        max={10000000}
         step={stepSize}
         onChange={handleChange}
       />

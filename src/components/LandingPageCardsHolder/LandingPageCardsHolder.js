@@ -15,7 +15,6 @@ function LandingPageCardsHolder() {
       alignItems="center"
       flexWrap="wrap"
     >
-      <img className={classes.wavesReversed} src={reverseWave} alt="" />
       <EmptyTransparentCard>
         <Container maxWidth="sm">
           <Box
@@ -93,9 +92,9 @@ function LandingPageCardsHolder() {
 }
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    overflowX: "hidden",
-  },
+  // root: {
+  //   overflowX: "hidden",
+  // },
   wavesReversed: {
     position: "absolute",
     width: "130vw",

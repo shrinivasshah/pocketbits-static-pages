@@ -3,9 +3,12 @@ import { Box, Typography } from "@material-ui/core";
 import CheckboxHolder from "../CheckboxHolder/CheckboxHolder";
 import SliderComponent from "../SliderComponent/SliderComponent";
 import { makeStyles } from "@material-ui/styles";
+import { useSelector } from "react-redux";
 
 function FeeDetails({ hideZeroFee }) {
   const classes = useStyles();
+
+  const prices = useSelector((state) => state.value.price);
   return (
     <>
       {!hideZeroFee ? (
@@ -30,16 +33,17 @@ function FeeDetails({ hideZeroFee }) {
           variant="h5"
           className={classes.oneThousand}
         >
-          <strong>₹1000</strong>
+          <strong>₹{prices}</strong>
         </Typography>
       </Box>
       <Box>
-        <Box display="flex" color="#888">
+        <Box display="flex" color="#888" justifyContent="space-between">
           <Typography variant="overline" className={classes.oneThousandFlex}>
             ₹1000
           </Typography>
+          <Typography variant="h5"></Typography>
           <Typography variant="overline" className={classes.oneThousandPlus}>
-            ₹1000k+
+            ₹10000k+
           </Typography>
         </Box>
         <SliderComponent />
