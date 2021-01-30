@@ -5,6 +5,7 @@ import secure from "../../assets/01.svg";
 import support from "../../assets/02.svg";
 import charges from "../../assets/03.svg";
 import { makeStyles } from "@material-ui/styles";
+import TransparentFlexBox from "../TransparentFlexBox/TransparentFlexBox";
 
 function LandingPageFifthRow() {
   const classes = useStyles();
@@ -21,6 +22,7 @@ function LandingPageFifthRow() {
         alignItems="center"
         height="40vh"
         width="100vw"
+        flexWrap="wrap"
         justifyContent="space-evenly"
       >
         <SingleItem
@@ -40,15 +42,7 @@ function LandingPageFifthRow() {
           No charges at all."
         />
       </Box>
-      <Box width="80%" margin="0 auto">
-        <Box
-          className={classes.wideBar}
-          height="30vh"
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-        ></Box>
-      </Box>
+      <TransparentFlexBox />
     </Box>
   );
 }

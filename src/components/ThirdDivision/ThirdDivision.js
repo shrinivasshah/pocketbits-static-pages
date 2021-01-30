@@ -10,6 +10,7 @@ function ThirdDivision() {
   const classes = useStyles();
   return (
     <Box
+      className={classes.root}
       color="white"
       display="flex"
       flexDirection="column"
@@ -19,7 +20,6 @@ function ThirdDivision() {
       width="100vw"
       position="relative"
       overflow="hidden"
-      paddingBottom="10vh"
     >
       <img
         className={classes.reverseWave}
@@ -100,6 +100,11 @@ function ThirdDivision() {
 }
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    [theme.breakpoints.down("lg")]: {
+      paddingBottom: "10vh",
+    },
+  },
   rightHeader: {
     paddingBottom: "20px",
     color: "#C5CDD9",

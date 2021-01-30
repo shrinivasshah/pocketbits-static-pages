@@ -1,7 +1,6 @@
 import { Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import { useSelector } from "react-redux";
-import data from "../cardListData";
 function TransperantCard({ icon, text, info, list }) {
   const state = useSelector((state) => state.tradingFee);
   const classes = useStyles();

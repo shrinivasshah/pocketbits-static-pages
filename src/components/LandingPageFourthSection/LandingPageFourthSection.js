@@ -9,13 +9,13 @@ import { useTheme } from "@material-ui/styles";
 import React from "react";
 import LandingPageCardsHolder from "../LandingPageCardsHolder/LandingPageCardsHolder";
 import LandingPageFeaturesHolder from "../LandingPageFeaturesHolder/LandingPageFeaturesHolder";
-
+import wavesReversed from "../../assets/wavesReverseEdited.svg";
 function LandingPageFourthSection() {
   const theme = useTheme();
   const small = useMediaQuery(theme.breakpoints.down("sm"));
   const classes = useStyles();
   return (
-    <Box
+    <div
       className={classes.root}
       paddingBottom="15vh"
       position="relative"
@@ -47,13 +47,36 @@ function LandingPageFourthSection() {
       ) : (
         <LandingPageCardsHolder />
       )}
-    </Box>
+    </div>
   );
 }
 
 const useStyles = makeStyles((theme) => ({
-  // root: {
-  //   overflow: "hidden",
+  root: {
+    paddingBottom: "40vh",
+    position: "relative",
+    color: "#fff",
+    minHeight: "150vh",
+    flexDirection: "column",
+    display: "flex",
+    alignItems: "center",
+    background: `url(${wavesReversed})`,
+    backgroundSize: "110%",
+    backgroundPositionX: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundPositionY: "70vh",
+    [theme.breakpoints.down("lg")]: {
+      backgroundPositionY: "95vh",
+      backgroundSize: "115%",
+      paddingBottom: "60vh",
+    },
+    justifyContent: "space-evenly",
+  },
+  // wavesReversed: {
+  //   zIndex: -100,
+  //   bottom: "-20vh",
+  //   position: "absolute",
+  //   width: "100%",
   // },
 }));
 export default LandingPageFourthSection;

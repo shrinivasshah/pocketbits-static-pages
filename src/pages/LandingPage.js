@@ -1,6 +1,7 @@
 import { Box } from "@material-ui/core";
 
 import React from "react";
+import FooterWithContent from "../components/Footer/FooterWithContent";
 import LandingPageFifthRow from "../components/LandingPageFifthSection/LandingPageFifthRow";
 import LandingPageFourthSection from "../components/LandingPageFourthSection/LandingPageFourthSection";
 
@@ -14,6 +15,7 @@ function LandingPage() {
       <ThirdDivision />
       <LandingPageFourthSection />
       <LandingPageFifthRow />
+      <FooterWithContent />
     </Box>
   );
 }

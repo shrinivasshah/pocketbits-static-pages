@@ -1,4 +1,4 @@
-import { Box, makeStyles, Typography } from "@material-ui/core";
+import { Box, makeStyles, Typography, Button } from "@material-ui/core";
 import React from "react";
 function TopFlexRowCard({ index, coin }) {
   const classes = useStyles();
@@ -6,6 +6,7 @@ function TopFlexRowCard({ index, coin }) {
     <>
       <Box className={classes.cardsInsideFlexRow}>
         <Box
+          color="#fff"
           key={index}
           height="100%"
           width="100%"
@@ -15,9 +16,16 @@ function TopFlexRowCard({ index, coin }) {
           alignItems="center"
         >
           <Typography variant="h5">{coin.symbol.slice(0, -3)}</Typography>
-          <Typography variant="h6">
-            <strong>₹{coin.buy}</strong>
-          </Typography>
+          <Button
+            size="large"
+            color="primary"
+            variant="contained"
+            className={classes.cardButton}
+          >
+            <Typography variant="h6" className={classes.buttonText}>
+              <strong>₹{coin.buy}</strong>
+            </Typography>
+          </Button>
         </Box>
       </Box>
     </>
@@ -33,6 +41,14 @@ const useStyles = makeStyles((theme) => ({
     width: "250px",
     borderRadius: "18px",
     border: "0.1px solid #444",
+  },
+  buttonText: {
+    color: "white",
+  },
+  cardButton: {
+    width: "70%",
+    height: "70px",
+    borderRadius: "20px",
   },
   highlightedCoinBox: {
     display: "flex",
