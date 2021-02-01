@@ -1,7 +1,7 @@
 import { Box, Container, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 
-function LandingPageFeature({ title, image, text }) {
+function LandingPageFeature({ title, image, text, careers }) {
   const classes = useStyles();
   return (
     <Box
@@ -10,16 +10,31 @@ function LandingPageFeature({ title, image, text }) {
       flexDirection="column"
       height="100%"
       textAlign="center"
-      justifyContent="space-between"
+      justifyContent={`${careers ? "space-evenly" : "space-between"}`}
     >
       <Container maxWidth="xs">
-        <img className={classes.featureImage} src={image} alt="features" />
-        <Typography variant="h6">
-          <strong>{title}</strong>
-        </Typography>
-        <Typography variant="body1">
-          <strong>{text}</strong>
-        </Typography>
+        <img
+          className={classes.featureImage}
+          style={careers ? { width: "100px", height: "auto" } : null}
+          src={image}
+          alt="features"
+        />
+
+        {!careers ? (
+          <Typography variant="h6">
+            <strong>{title}</strong>
+          </Typography>
+        ) : (
+          <Typography variant="h6">{title}</Typography>
+        )}
+
+        {!careers ? (
+          <Typography variant="body1">
+            <strong>{text}</strong>
+          </Typography>
+        ) : (
+          <Typography variant="body1">{text}</Typography>
+        )}
       </Container>
     </Box>
   );

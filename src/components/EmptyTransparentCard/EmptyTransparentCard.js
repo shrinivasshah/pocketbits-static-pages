@@ -2,9 +2,20 @@ import { Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import React from "react";
 
-function EmptyTransparentCard({ children }) {
+function EmptyTransparentCard({ children, careers }) {
   const classes = useStyles();
-  return <Box className={classes.root}>{children}</Box>;
+  return (
+    <Box
+      className={classes.root}
+      style={
+        careers
+          ? { width: "280px", height: "380px", margin: "20px auto" }
+          : null
+      }
+    >
+      {children}
+    </Box>
+  );
 }
 
 const useStyles = makeStyles((theme) => ({

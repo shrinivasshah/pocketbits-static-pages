@@ -105,6 +105,12 @@ function Navbar(props) {
                   component={Link}
                   className={classes.tab}
                 />
+                <Tab
+                  label="Careers"
+                  to="/careers"
+                  component={Link}
+                  className={classes.tab}
+                />
               </Tabs>
             </Toolbar>
           </Container>
