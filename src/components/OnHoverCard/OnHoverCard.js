@@ -9,6 +9,7 @@ function OnHoverCard() {
 
 const useStyles = makeStyles((theme) => ({
   onHoverCard: {
+    display: "inline-block",
     height: "400px",
     width: "250px",
     background:

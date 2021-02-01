@@ -63,7 +63,8 @@ const useStyles = makeStyles((theme) => ({
       width: "80%",
       height: "100%",
     },
-
+    marginTop: "20px",
+    // zIndex: "-2",
     width: "338px",
     height: "457px",
     display: "flex",
@@ -97,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
       [theme.breakpoints.down("sm")]: {
         transform: "scale(1.05,1.05)",
       },
-      transform: "scale(1.15,1.15)",
+      transform: "scale(1.05,1.05)",
     },
   },
   image: {

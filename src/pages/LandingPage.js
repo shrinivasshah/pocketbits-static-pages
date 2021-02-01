@@ -10,7 +10,13 @@ import ThirdDivision from "../components/ThirdDivision/ThirdDivision";
 
 function LandingPage() {
   return (
-    <Box>
+    <Box
+      minHeight="100vh"
+      display="flex"
+      flexDirection="column"
+      alignItems="strech"
+      justifyContent="space-between"
+    >
       <LandingPageHeader />
       <ThirdDivision />
       <LandingPageFourthSection />

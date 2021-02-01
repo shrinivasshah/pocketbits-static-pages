@@ -13,6 +13,7 @@ function PageHeader() {
           <Box
             display="flex"
             flexDirection="column"
+            height="100%"
             justifyContent="space-evenly"
             className={classes.rowBox}
           >
@@ -49,6 +50,7 @@ const useStyles = makeStyles((theme) => {
       // [theme.breakpoints.up("lg")]: {
       //   marginTop: "-0px",
       // },
+      height: "50%",
       [theme.breakpoints.down("md")]: {
         marginTop: "70px",
       },
@@ -59,6 +61,7 @@ const useStyles = makeStyles((theme) => {
       display: "flex",
       flexWrap: "wrap",
       position: "relative",
+
       // textAlign: "space-around",
       // alignItems: "center",
       color: "#fff",
@@ -76,7 +79,7 @@ const useStyles = makeStyles((theme) => {
         justifyContent: "flex-start",
       },
 
-      height: "25%",
+      height: "40%",
       textAlign: "center",
     },
     partition1: {
