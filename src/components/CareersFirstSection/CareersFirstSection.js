@@ -46,8 +46,10 @@ function CareersFirstSection() {
 const useStyles = makeStyles((theme) => ({
   root: {
     color: "#fff",
+    height: "100vh",
     minHeight: "100vh",
     width: "100vw",
+    marginBottom: "15vh",
   },
   mainHeader: {
     color: "#fff",
@@ -65,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   headerDetailsContainer: {
-    marginTop: "20vh",
+    // marginTop: "20vh",
     display: "flex",
     flex: "1",
     flexDirection: "column",
@@ -75,8 +77,11 @@ const useStyles = makeStyles((theme) => ({
     },
     alignItems: "flex-start",
     justifyContent: "space-evenly",
-    width: "40%",
-    height: "50%",
+    width: "50%",
+    height: "70%",
+    [theme.breakpoints.only("xl")]: {
+      height: "50%",
+    },
   },
   spanColor: {
     color: theme.palette.primary.main,
