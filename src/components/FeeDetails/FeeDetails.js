@@ -9,6 +9,8 @@ function FeeDetails({ hideZeroFee }) {
   const classes = useStyles();
 
   const prices = useSelector((state) => state.value.price);
+  /*use commented code for main integration*/
+  //const prices = useSelector((state) => state.sliderChange.value.price);
   return (
     <>
       {!hideZeroFee ? (

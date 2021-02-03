@@ -5,6 +5,7 @@ import FeesPage from "./pages/FeesPage";
 import Navbar from "./components/Navbar/Navbar";
 import LandingPage from "./pages/LandingPage";
 import Careers from "./pages/Careers";
+import AboutUs from "./pages/AboutUs";
 function App() {
   return (
     <Router>
@@ -12,6 +13,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <LandingPage />
+        </Route>
+        <Route exact path="/about-us">
+          <AboutUs />
         </Route>
         <Route path="/contact-us">
           <ContactUs />

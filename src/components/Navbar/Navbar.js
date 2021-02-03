@@ -98,7 +98,12 @@ function Navbar(props) {
                   component={Link}
                   className={classes.tab}
                 />
-                <Tab label="About Us" className={classes.tab} />
+                <Tab
+                  label="About Us"
+                  to="/about-us"
+                  component={Link}
+                  className={classes.tab}
+                />
                 <Tab
                   label="Contact Us"
                   to="/contact-us"
