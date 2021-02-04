@@ -116,6 +116,12 @@ function Navbar(props) {
                   component={Link}
                   className={classes.tab}
                 />
+                <Tab
+                  label="BugBounty"
+                  to="/bug-bounty"
+                  component={Link}
+                  className={classes.tab}
+                />
               </Tabs>
             </Toolbar>
           </Container>

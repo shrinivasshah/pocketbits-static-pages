@@ -1,8 +1,17 @@
-import { Box, Container, makeStyles, Typography } from "@material-ui/core";
+import {
+  Box,
+  Container,
+  makeStyles,
+  Typography,
+  useMediaQuery,
+} from "@material-ui/core";
+import { useTheme } from "@material-ui/styles";
 import React from "react";
 
 function LandingPageFeature({ title, image, text, careers }) {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery((theme) => theme.breakpoints.down("md"));
   return (
     <Box
       display="flex"

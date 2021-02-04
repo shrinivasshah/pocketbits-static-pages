@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import LandingPage from "./pages/LandingPage";
 import Careers from "./pages/Careers";
 import AboutUs from "./pages/AboutUs";
+import BugBountyPage from "./pages/BugBountyPage";
 function App() {
   return (
     <Router>
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path="/careers">
           <Careers />
+        </Route>
+        <Route path="/bug-bounty">
+          <BugBountyPage />
         </Route>
       </Switch>
     </Router>

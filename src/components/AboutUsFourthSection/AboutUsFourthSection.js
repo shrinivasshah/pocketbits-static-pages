@@ -66,9 +66,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "space-between",
     color: "#fff",
-
     marginTop: "40vh",
-
     height: "100vh",
     minHeight: "100vh",
     width: "100vw",
