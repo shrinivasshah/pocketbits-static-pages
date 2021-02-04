@@ -8,7 +8,7 @@ function BugBountySecondSection() {
     <div className={classes.root}>
       <Box
         marginBottom="5%"
-        height="50vh"
+        minHeight="50vh"
         display="flex"
         width="80%"
         margin="0 auto"
@@ -76,7 +76,7 @@ function BugBountySecondSection() {
       </Box>
       <Box
         marginBottom="5%"
-        height="50vh"
+        minHeight="50vh"
         display="flex"
         width="80%"
         margin="0 auto"
@@ -113,7 +113,7 @@ function BugBountySecondSection() {
       </Box>
       <Box
         marginBottom="5%"
-        height="50vh"
+        minHeight="50vh"
         display="flex"
         width="80%"
         margin="0 auto"
@@ -168,7 +168,7 @@ function BugBountySecondSection() {
       </Box>
       <Box
         marginBottom="5%"
-        height="50vh"
+        minHeight="50vh"
         display="flex"
         width="80%"
         margin="0 auto"
@@ -219,7 +219,7 @@ function BugBountySecondSection() {
       </Box>
       <Box
         marginBottom="10%"
-        height="10vh"
+        minHeight="10vh"
         display="flex"
         width="80%"
         margin="0 auto"
@@ -237,7 +237,7 @@ function BugBountySecondSection() {
       </Box>
       <Box
         marginBottom="15%"
-        height="10vh"
+        minHeight="10vh"
         display="flex"
         width="80%"
         margin="0 auto"
@@ -276,7 +276,7 @@ function BugBountySecondSection() {
       </Box>
       <Box
         marginBottom="10%"
-        height="10vh"
+        minHeight="10vh"
         display="flex"
         width="80%"
         margin="0 auto"

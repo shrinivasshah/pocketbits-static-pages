@@ -75,6 +75,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    flexWrap: "wrap",
   },
   mainColor: {
     color: "#56C3A4",
