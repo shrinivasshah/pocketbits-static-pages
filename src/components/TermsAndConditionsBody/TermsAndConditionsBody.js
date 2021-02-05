@@ -521,7 +521,7 @@ function TermsAndConditionsBody() {
 const useStyles = makeStyles((theme) => ({
   root: {
     color: "#fff",
-    width: "80%",
+    width: "70%",
     margin: "0 auto",
   },
   subHeading: {
