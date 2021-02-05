@@ -3,7 +3,7 @@ import CardComponentHolder from "../components/CardComponentHolder/CardComponent
 import EndCredits from "../components/EndCredits/EndCredits";
 import FooterWithContent from "../components/Footer/FooterWithContent";
 import InputForm from "../components/InputForm/InputForm";
-import Navbar from "../components/Navbar/Navbar";
+
 import PageHeader from "../components/PageHeader/PageHeader";
 
 function ContactUs() {

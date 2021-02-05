@@ -1,4 +1,3 @@
-// import "./App.css";
 import ContactUs from "./pages/ContactUs";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import FeesPage from "./pages/FeesPage";
@@ -7,6 +6,7 @@ import LandingPage from "./pages/LandingPage";
 import Careers from "./pages/Careers";
 import AboutUs from "./pages/AboutUs";
 import BugBountyPage from "./pages/BugBountyPage";
+import TermsAndConditions from "./pages/TermsAndConditions";
 function App() {
   return (
     <Router>
@@ -29,6 +29,9 @@ function App() {
         </Route>
         <Route path="/bug-bounty">
           <BugBountyPage />
+        </Route>
+        <Route path="/terms-conditions">
+          <TermsAndConditions />
         </Route>
       </Switch>
     </Router>
