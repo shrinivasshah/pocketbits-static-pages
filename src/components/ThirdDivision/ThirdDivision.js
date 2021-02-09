@@ -1,5 +1,5 @@
-import { Box, Button, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
+import { Box, Button, Typography, useMediaQuery } from "@material-ui/core";
+import { makeStyles, useTheme } from "@material-ui/styles";
 import React from "react";
 import TransperantCard from "../TransperantCard/TransperantCard";
 import list from "../cardListData";
@@ -8,6 +8,9 @@ import FeeDetails from "../FeeDetails/FeeDetails";
 import reverseWave from "../../assets/reverseWave.svg";
 function ThirdDivision() {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
+  console.log(matches);
   return (
     <Box
       className={classes.root}
@@ -16,6 +19,7 @@ function ThirdDivision() {
       flexDirection="column"
       alignItems="center"
       justifyContent="space evenly"
+      height="100vh"
       minHeight="100vh"
       width="100vw"
       position="relative"
@@ -31,6 +35,8 @@ function ThirdDivision() {
         width="100%"
         justifyContent="space-evenly"
         height="70%"
+        alignItems="strech"
+        flexWrap="wrap"
       >
         <Box
           display="flex"
@@ -48,7 +54,7 @@ function ThirdDivision() {
           </Typography>
         </Box>
         <Box
-          width="30%"
+          className={classes.detailsBlock}
           display="flex"
           flexDirection="column"
           alignItems="strech"
@@ -60,6 +66,7 @@ function ThirdDivision() {
           <FeeDetails hideZeroFee />
         </Box>
         <Box
+          className={classes.emialHolder}
           display="flex"
           width="400px"
           height="200px"
@@ -102,40 +109,61 @@ function ThirdDivision() {
 const useStyles = makeStyles((theme) => ({
   root: {
     [theme.breakpoints.down("lg")]: {
-      paddingBottom: "10vh",
+      paddingBottom: "30vh",
+    },
+    [theme.breakpoints.down("md")]: {
+      paddingBottom: "50vh",
+    },
+    [theme.breakpoints.down("xs")]: {
+      paddingBottom: "30vh",
     },
   },
   rightHeader: {
     paddingBottom: "20px",
     color: "#C5CDD9",
     fontWeight: 100,
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+    },
   },
   reverseWave: {
     position: "absolute",
     zIndex: "-100",
     [theme.breakpoints.down("lg")]: {
-      top: "0%",
+      top: "15%",
     },
     [theme.breakpoints.down("md")]: {
-      top: "25%",
-    },
-    [theme.breakpoints.down("sm")]: {
-      top: "40%",
-    },
-    [theme.breakpoints.down("xs")]: {
       top: "50%",
+      display: "none",
     },
-    top: "-15%",
+    // [theme.breakpoints.down("sm")]: {
+    //   top: "40%",
+    // },
+    // [theme.breakpoints.down("xs")]: {
+    //   top: "75%",
+    // },
+    top: "-9%",
     left: "-30%",
     width: "150%",
   },
+  detailsBlock: {
+    [theme.breakpoints.down("md")]: {
+      width: "80%",
+    },
+    marginTop: "30px",
+    width: "30%",
+  },
   bottomText: {
-    alignSelf: "flex-start",
     paddingTop: "2rem",
   },
   emailLabel: {
     paddingBottom: "4px",
     borderBottom: "1px solid #444",
+  },
+  emialHolder: {
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
   },
   emailBox: {
     minWidth: "100%",

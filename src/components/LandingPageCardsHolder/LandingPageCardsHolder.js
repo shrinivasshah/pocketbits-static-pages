@@ -36,7 +36,7 @@ function LandingPageCardsHolder() {
         <Container maxWidth="sm">
           <Box
             width="100%"
-            height="200px"
+            minHeight="200px"
             display="flex"
             flexDirection="column"
             alignItems="start"

@@ -1,4 +1,4 @@
-import { Box } from "@material-ui/core";
+import { Box, useMediaQuery, useTheme } from "@material-ui/core";
 import React from "react";
 import SingleItem from "../LandingPageFeature/LandingPageFeature";
 import secure from "../../assets/01.svg";
@@ -9,18 +9,25 @@ import TransparentFlexBox from "../TransparentFlexBox/TransparentFlexBox";
 
 function LandingPageFifthRow() {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box
+      height="100vh"
       minHeight="100vh"
       display="flex"
       flexDirection="column"
       justifyContent="space-evenly"
+      marginBottom="15vh"
     >
       <Box
         color="#fff"
         display="flex"
         alignItems="center"
         height="40vh"
+        minHeight="40vh"
+        marginY="20vh"
+        marginBottom="10vh"
         width="100vw"
         flexWrap="wrap"
         justifyContent="space-evenly"
@@ -42,7 +49,7 @@ function LandingPageFifthRow() {
           No charges at all."
         />
       </Box>
-      <TransparentFlexBox />
+      {matches ? null : <TransparentFlexBox />}
     </Box>
   );
 }

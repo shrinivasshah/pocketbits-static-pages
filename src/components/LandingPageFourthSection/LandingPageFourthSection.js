@@ -17,9 +17,9 @@ function LandingPageFourthSection() {
   return (
     <div
       className={classes.root}
-      paddingBottom="15vh"
       position="relative"
       color="#fff"
+      height="150vh"
       minHeight="150vh"
       flexDirection="column"
       display="flex"
@@ -34,7 +34,7 @@ function LandingPageFourthSection() {
         height="10vh"
         width="80%"
       >
-        <Typography variant="h3">
+        <Typography variant="h3" className={classes.title}>
           <strong>
             Bharat’s Most Atmanirbhar & Trusted Exchange since 2017
           </strong>
@@ -53,13 +53,10 @@ function LandingPageFourthSection() {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingBottom: "40vh",
+    // paddingBottom: "40vh",
     position: "relative",
     color: "#fff",
-    minHeight: "150vh",
-    flexDirection: "column",
-    display: "flex",
-    alignItems: "center",
+    marginBottom: "20px",
     background: `url(${wavesReversed})`,
     backgroundSize: "110%",
     backgroundPositionX: "center",
@@ -68,10 +65,15 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("lg")]: {
       backgroundPositionY: "95vh",
       backgroundSize: "115%",
-      paddingBottom: "60vh",
+      // paddingBottom: "60vh",
+      background: "none",
     },
-    justifyContent: "space-evenly",
   },
+  title: {
+    width: "100%",
+    textAlign: "center",
+  },
+
   // wavesReversed: {
   //   zIndex: -100,
   //   bottom: "-20vh",

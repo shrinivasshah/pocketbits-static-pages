@@ -1,4 +1,4 @@
-import { Box } from "@material-ui/core";
+import { Box, makeStyles } from "@material-ui/core";
 import React from "react";
 import fast from "../../assets/fast.svg";
 import inrDeposit from "../../assets/inrDeposit.svg";
@@ -6,12 +6,16 @@ import tradingFeesVector from "../../assets/tradingFeeVector.svg";
 import SingleItem from "../LandingPageFeature/LandingPageFeature";
 
 function LandingPageFeaturesHolder() {
+  const classes = useStyles();
   return (
     <Box
+      className={classes.root}
       color="#fff"
       display="flex"
       alignItems="center"
       height="30vh"
+      minHeight="30vh"
+      flexWrap="wrap"
       width="100vw"
       justifyContent="space-evenly"
     >
@@ -30,5 +34,13 @@ function LandingPageFeaturesHolder() {
     </Box>
   );
 }
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    [theme.breakpoints.down("md")]: {
+      paddingBottom: "100vh",
+    },
+  },
+}));
 
 export default LandingPageFeaturesHolder;
