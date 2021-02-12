@@ -11,6 +11,7 @@ function LandingPageFifthRow() {
   const classes = useStyles();
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
+  const sm_matches = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <Box
       height="100vh"
@@ -18,7 +19,7 @@ function LandingPageFifthRow() {
       display="flex"
       flexDirection="column"
       justifyContent="space-evenly"
-      marginBottom="15vh"
+      paddingBottom={sm_matches ? "80vh" : "15vh"}
     >
       <Box
         color="#fff"
