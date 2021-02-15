@@ -8,8 +8,10 @@ function AboutUsSecondSection() {
     <div className={classes.root}>
       <Box
         height="35vh"
+        minHeight="35vh"
         width="80%"
         margin="0 auto"
+        marginBottom="10vh"
         display="flex"
         flexDirection="column"
         justifyContent="center"
@@ -72,10 +74,14 @@ function AboutUsSecondSection() {
 const useStyles = makeStyles((theme) => ({
   root: {
     color: "#fff",
+    height: "70vh",
     minHeight: "70vh",
     width: "100vw",
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.only("xl")]: {
       marginTop: "300px",
+    },
+    [theme.breakpoints.down("lg")]: {
+      marginTop: "20vh",
     },
   },
   topHeader: {
