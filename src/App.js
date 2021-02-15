@@ -7,6 +7,7 @@ import Careers from "./pages/Careers";
 import AboutUs from "./pages/AboutUs";
 import BugBountyPage from "./pages/BugBountyPage";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import { useEffect } from "react";
 function App() {
   return (
     <Router>

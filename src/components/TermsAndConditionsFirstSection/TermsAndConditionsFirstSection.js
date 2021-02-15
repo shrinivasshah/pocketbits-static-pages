@@ -13,11 +13,8 @@ function TermsAndConditionsFirstSection() {
       <Box
         className={classes.mainBox}
         display="flex"
-        minHeight="70vh"
-        height="70vh"
         width="80vw"
         margin="0 auto"
-        justifyContent="center"
         alignItems="center"
         textAlign="center"
       >
@@ -77,6 +74,7 @@ function TermsAndConditionsFirstSection() {
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    marginTop: "10vh",
     color: "#fff",
     minHeight: "100vh",
     width: "100vw",
