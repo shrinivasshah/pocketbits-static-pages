@@ -1,10 +1,12 @@
-import { Box, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
+import { Box, Typography, useMediaQuery } from "@material-ui/core";
+import { makeStyles, useTheme } from "@material-ui/styles";
 import React from "react";
 import mission from "../../assets/goal.svg";
 import vision from "../../assets/aim.svg";
 function CareersThirdSection() {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <div className={classes.root}>
       <Typography variant="h2" className={classes.headerText}>
@@ -15,6 +17,7 @@ function CareersThirdSection() {
         display="flex"
         alignItems="center"
         justifyContent="space-evenly"
+        flexWrap={`${matches ? "wrap" : null}`}
       >
         <img src={mission} alt="mission" className={classes.img} />
         <Box
@@ -37,7 +40,7 @@ function CareersThirdSection() {
           </Typography>
         </Box>
       </Box>
-      <Typography variant="h2" className={classes.headerText}>
+      <Typography variant="h2" className={classes.headerText2}>
         <b>Our Vision</b>
       </Typography>
       <Box
@@ -45,6 +48,7 @@ function CareersThirdSection() {
         display="flex"
         alignItems="center"
         justifyContent="space-evenly"
+        flexWrap={`${matches ? "wrap" : null}`}
       >
         <Box width="60%">
           <Typography variant="h6" className={classes.fontweight}>
@@ -63,7 +67,17 @@ function CareersThirdSection() {
 const useStyles = makeStyles((theme) => ({
   root: {
     color: "#fff",
+    height: "100vh",
     minHeight: "100vh",
+    [theme.breakpoints.down("md")]: {
+      height: "200vh",
+      minHeight: "200vh",
+    },
+    [theme.breakpoints.down("sm")]: {
+      height: "300vh",
+      minHeight: "300vh",
+    },
+
     width: "80%",
     margin: "15vh auto",
     display: "flex",
@@ -74,8 +88,15 @@ const useStyles = makeStyles((theme) => ({
   headerText: {
     textAlign: "center",
   },
+  headerText2: {
+    textAlign: "center",
+    marginTop: "90px",
+  },
   img: {
     flex: 1,
+    [theme.breakpoints.down("md")]: {
+      width: "200px",
+    },
   },
   fontweight: {
     fontWeight: 200,

@@ -1,13 +1,21 @@
-import { Box, Typography, Button } from "@material-ui/core";
+import {
+  Box,
+  Typography,
+  Button,
+  useMediaQuery,
+  useTheme,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import React from "react";
 
 function CareersFourthSection() {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <Box
       height="100vh"
-      display="flex"
+      display={`${matches ? "none" : "flex"}`}
       flexDirection="column"
       alignItems="center"
       justifyContent="center"

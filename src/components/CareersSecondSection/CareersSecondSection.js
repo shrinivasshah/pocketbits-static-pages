@@ -120,6 +120,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     color: "#fff",
     height: "50vh",
+    minHeight: "50vh",
+    [theme.breakpoints.down("md")]: {
+      height: "100vh",
+      minHeight: "100vh",
+    },
     width: "100vw",
     textAlign: "center",
   },

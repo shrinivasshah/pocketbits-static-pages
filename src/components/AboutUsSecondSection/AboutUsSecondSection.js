@@ -1,8 +1,10 @@
-import { Box, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
+import { Box, Typography, useMediaQuery } from "@material-ui/core";
+import { makeStyles, useTheme } from "@material-ui/styles";
 import React from "react";
 
 function AboutUsSecondSection() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("sm"));
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -47,6 +49,7 @@ function AboutUsSecondSection() {
         height="35vh"
         width="80%"
         margin="0 auto"
+        marginTop={`${matches ? "20vh" : null}`}
         flexDirection="column"
         justifyContent="center"
         alignItems="strech"

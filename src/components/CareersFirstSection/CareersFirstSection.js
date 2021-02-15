@@ -1,10 +1,19 @@
-import { Box, makeStyles, Typography, Button } from "@material-ui/core";
+import {
+  Box,
+  makeStyles,
+  Typography,
+  Button,
+  useTheme,
+  useMediaQuery,
+} from "@material-ui/core";
 import careersHeaderImage from "../../assets/careersHeaderImage.svg";
 import React from "react";
 import { ScrollLink } from "react-scroll";
 import { BsChevronCompactDown } from "react-icons/bs";
 
 function CareersFirstSection() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -33,11 +42,13 @@ function CareersFirstSection() {
           </Button>
         </Box>
 
-        <img
-          className={classes.headerImage}
-          src={careersHeaderImage}
-          alt="we are hiring"
-        />
+        {!matches ? (
+          <img
+            className={classes.headerImage}
+            src={careersHeaderImage}
+            alt="we are hiring"
+          />
+        ) : null}
       </Box>
     </div>
   );
