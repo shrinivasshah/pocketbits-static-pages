@@ -22,27 +22,22 @@ function AboutUsSecondSection() {
         <Typography variant="h2" className={classes.topHeader}>
           <b>About the Company</b>
         </Typography>
-        <ul>
-          <li>
-            <Typography variant="body1" className={classes.ulListItem}>
-              Serving users since 2017, PocketBits takes pride in being one of
-              Bharat’s oldest active crypto-platforms.
-            </Typography>
-          </li>
-          <li>
-            <Typography variant="body1" className={classes.ulListItem}>
-              At PocketBits, we provide a digital asset tradin platform built on
-              ultra-modern services for both the amateur as well as professional
-              digital asset traders.
-            </Typography>
-          </li>
-          <li>
-            <Typography variant="body1" className={classes.ulListItem}>
-              We see crypto as the future to financial freedom and aim at
-              becoming the corridor to a digital economy for our users
-            </Typography>
-          </li>
-        </ul>
+
+        <Typography variant="h6" className={classes.ulListItem}>
+          Serving users since 2017, PocketBits takes pride in being one of
+          Bharat’s oldest active crypto-platforms.
+        </Typography>
+
+        <Typography variant="h6" className={classes.ulListItem}>
+          At PocketBits, we provide a digital asset tradin platform built on
+          ultra-modern services for both the amateur as well as professional
+          digital asset traders.
+        </Typography>
+
+        <Typography variant="h6" className={classes.ulListItem}>
+          We see crypto as the future to financial freedom and aim at becoming
+          the corridor to a digital economy for our users
+        </Typography>
       </Box>
       <Box
         display="flex"
@@ -57,14 +52,14 @@ function AboutUsSecondSection() {
         <Typography variant="h2" className={classes.topHeader}>
           <b>Who we are?</b>
         </Typography>
-        <Typography className={classes.ulListItem2}>
+        <Typography variant="h6" className={classes.ulListItem2}>
           The team behind PocketBits is the secret to our growth!
         </Typography>
-        <Typography className={classes.ulListItem2}>
+        <Typography variant="h6" className={classes.ulListItem2}>
           We are a group of young and dynamic professionals from diverse fields
           that share a common vision; viz. “to embrace change.”
         </Typography>
-        <Typography className={classes.ulListItem2}>
+        <Typography variant="h6" className={classes.ulListItem2}>
           We are amongst the early passengers that boarded the Crypto express
           and optimistically look forward to getting like minded individuals
           onboard this journey to a digital future.
@@ -92,10 +87,11 @@ const useStyles = makeStyles((theme) => ({
   },
   ulListItem: {
     lineHeight: "50px",
-    fontWeight: 300,
+    fontFamily: "'Poppins', sans-serif",
   },
   ulListItem2: {
     lineHeight: "50px",
+    fontFamily: "'Poppins', sans-serif",
   },
 }));
 

@@ -22,7 +22,7 @@ function FooterWithContent() {
           justifyContent="space-evenly"
           className={classes.root}
         >
-          <Box
+          {/* <Box
             display="flex"
             flexDirection="column"
             justifyContent="space-around"
@@ -37,7 +37,7 @@ function FooterWithContent() {
                 Signed up
               </span>
             </Typography>
-          </Box>
+          </Box> */}
           <Box
             display="flex"
             justifyContent="space-between"

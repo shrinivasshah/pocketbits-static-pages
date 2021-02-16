@@ -31,7 +31,7 @@ function LandingPageFourthSection() {
         display="flex"
         alignItems="center"
         justifyContent="center"
-        height="10vh"
+        height="20vh"
         width="80%"
       >
         <Typography variant="h3" className={classes.title}>
