@@ -54,6 +54,11 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "20px",
     height: "auto",
     width: "200px",
+    [theme.breakpoints.down("md")]: {
+      height: "auto",
+      width: "130px",
+      marginBottom: "0",
+    },
   },
 }));
 

@@ -62,8 +62,14 @@ const useStyles = makeStyles((theme) => ({
     background:
       "radial-gradient(98.09% 98.09% at 31.51% 23.05%, rgba(75, 80, 94, 0.5) 0%, rgba(36, 38, 43, 0.5) 100%)",
     width: "100%",
+    minHight: "70vh",
     height: "70vh",
+    [theme.breakpoints.down("lg")]: {
+      height: "100%",
+      padding: "100px 0",
+    },
     display: "flex",
+    flexWrap: "wrap",
     flexDirection: "column",
     alignItems: "strech",
     justifyContent: "space-evenly",
