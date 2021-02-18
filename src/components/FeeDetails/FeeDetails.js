@@ -30,14 +30,10 @@ function FeeDetails({ hideZeroFee }) {
         >
           Average Monthly Trading
         </Typography>
-        <Typography
-          display="block"
-          variant="h5"
-          className={classes.oneThousand}
-        >
-          <strong>₹{prices}</strong>
-        </Typography>
       </Box>
+      <Typography display="block" variant="h5" className={classes.oneThousand}>
+        <strong>₹{prices}</strong>
+      </Typography>
       <Box>
         <Box display="flex" color="#888" justifyContent="space-between">
           <Typography variant="overline" className={classes.oneThousandFlex}>
@@ -61,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
   },
   oneThousand: {
+    textAlign: "center",
     // marginLeft: "55%",
   },
   oneThousandFlex: {

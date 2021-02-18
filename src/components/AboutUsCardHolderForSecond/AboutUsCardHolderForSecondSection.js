@@ -18,6 +18,12 @@ function AboutUsCardHolderForSecondSection() {
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    [theme.breakpoints.down("md")]: {
+      marginTop: "10vh",
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "25vh",
+    },
     position: "relative",
     display: "flex",
     alignItems: "center",

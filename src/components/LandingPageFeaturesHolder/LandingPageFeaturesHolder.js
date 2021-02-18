@@ -38,7 +38,14 @@ function LandingPageFeaturesHolder() {
 const useStyles = makeStyles((theme) => ({
   root: {
     [theme.breakpoints.down("md")]: {
-      paddingBottom: "100vh",
+      marginBottom: "20vh",
+    },
+    ["@media (max-width:690px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      marginBottom: "70vh",
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: "100vh",
     },
   },
 }));

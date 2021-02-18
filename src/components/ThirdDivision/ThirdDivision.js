@@ -109,10 +109,10 @@ function ThirdDivision() {
 const useStyles = makeStyles((theme) => ({
   root: {
     [theme.breakpoints.down("lg")]: {
-      paddingBottom: "30vh",
+      paddingBottom: "20vh",
     },
     [theme.breakpoints.down("md")]: {
-      paddingBottom: "50vh",
+      paddingBottom: "30vh",
     },
     [theme.breakpoints.down("xs")]: {
       paddingBottom: "30vh",

@@ -236,7 +236,7 @@ function BugBountySecondSection() {
         </Typography>
       </Box>
       <Box
-        marginBottom="15%"
+        marginBottom="10%"
         minHeight="10vh"
         display="flex"
         width="80%"

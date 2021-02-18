@@ -33,6 +33,7 @@ function LandingPageFourthSection() {
         justifyContent="center"
         height="20vh"
         width="80%"
+        margin="0 auto"
       >
         <Typography variant="h3" className={classes.title}>
           <strong>

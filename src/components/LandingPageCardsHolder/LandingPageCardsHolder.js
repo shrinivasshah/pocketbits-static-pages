@@ -31,7 +31,7 @@ function LandingPageCardsHolder() {
             <Typography variant="body1">Hack-free operations</Typography>
           </Box>
         </Container> */}
-        <Box width="100%" height="100px">
+        <Box width="100%" height="100px" textAlign="center">
           <div className={classes.innerTitle}>
             <Container maxWidth="md">
               <Typography variant="h5">
@@ -44,6 +44,9 @@ function LandingPageCardsHolder() {
           <div className={classes.innerText}>
             <Container maxWidth="md">
               <Typography variant="body1">Hack-free operations</Typography>
+            </Container>
+            <Container maxWidth="md">
+              <Typography variant="body1">99% cold stoarge</Typography>
             </Container>
           </div>
         </Box>
@@ -77,7 +80,7 @@ function LandingPageCardsHolder() {
             </Typography>
           </Box>
         </Container> */}
-        <Box width="100%" height="100px">
+        <Box width="100%" height="100px" textAlign="center">
           <div className={classes.innerTitle}>
             <Container maxWidth="md">
               <Typography variant="h5">
@@ -104,8 +107,6 @@ function LandingPageCardsHolder() {
               <Typography variant="body1">
                 <strong>KYC & AML Complaint</strong>
               </Typography>
-            </Container>
-            <Container maxWidth="md">
               <Typography variant="body1">
                 <strong>(Bank Standards)</strong>
               </Typography>
@@ -137,7 +138,7 @@ function LandingPageCardsHolder() {
             </Typography>
           </Box>
         </Container> */}
-        <Box width="100%" height="100px">
+        <Box width="100%" height="100px" textAlign="center">
           <div className={classes.innerTitle}>
             <Container maxWidth="md">
               <Typography variant="h5">
@@ -180,6 +181,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   innerText: {
+    textAlign:'center',
     width: "100%",
     height: "100%",
     display: "flex",

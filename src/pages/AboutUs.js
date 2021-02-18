@@ -4,7 +4,7 @@ import AboutUsFifthSection from "../components/AboutUsFifthSection/AboutUsFifthS
 import AboutUsFirstSection from "../components/AboutUsFirstSection/AboutUsFirstSection";
 import AboutUsFourthSection from "../components/AboutUsFourthSection/AboutUsFourthSection";
 import AboutUsSecondSection from "../components/AboutUsSecondSection/AboutUsSecondSection";
-import AboutUsThirdSection from "../components/AboutUsThirdSection/AboutUsThirdSection";
+// import AboutUsThirdSection from "../components/AboutUsThirdSection/AboutUsThirdSection";
 import FooterWithContent from "../components/Footer/FooterWithContent";
 
 function AboutUs() {
@@ -13,7 +13,7 @@ function AboutUs() {
       <AboutUsFirstSection />
       <AboutUsSecondSection />
       <AboutUsCardHolderForSecondSection />
-      <AboutUsThirdSection />
+      {/* <AboutUsThirdSection /> */}
       <AboutUsFourthSection />
       <AboutUsFifthSection />
       <FooterWithContent />
